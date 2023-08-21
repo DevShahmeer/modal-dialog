@@ -1,13 +1,13 @@
 import React from 'react'
-
-import { useModal } from './ModalContext'
+import { useDispatch } from "react-redux"
+import { openModal } from './modalSlice'
 
 const ModalContent = () => {
-    const { openModal } = useModal();
+
+    const dispatch = useDispatch()
+
     return (
-        <div>
-            <button onClick={openModal}>Open Modal</button>
-        </div>
+        <button onClick={() => dispatch(openModal())}>Open Modal</button>
     )
 }
 
