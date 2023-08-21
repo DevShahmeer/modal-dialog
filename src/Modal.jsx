@@ -1,5 +1,4 @@
 import React from 'react'
-import { useModal } from './ModalContext'
 import { useSelector, useDispatch } from 'react-redux';
 import { closeModal } from './modalSlice';
 
