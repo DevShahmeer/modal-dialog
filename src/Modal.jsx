@@ -1,21 +1,25 @@
-import React from 'react';
-import { useModal } from './ModalContext';
+import React from 'react'
+import { useModal } from './ModalContext'
+import { useSelector, useDispatch } from 'react-redux';
+import { closeModal } from './modalSlice';
 
-const Modal = ({ children }) => {
-  const { isModalOpen, closeModal } = useModal();
+const Modal = ({children}) => {
 
-  if (!isModalOpen) return null;
+  const isOpen =  useSelector(state => state.modal.isOpen);
+  const dispatch = useDispatch()
 
+  if(!isOpen){
+    return null
+  };
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <button className="close-button" onClick={closeModal}>
-          Close
-        </button>
+    <div className='modal-overlay'>
+      <div className='modal'>
+        <button className='close-button' onClick={() => dispatch(closeModal())}>Close</button>
         {children}
       </div>
+      
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal
