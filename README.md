@@ -2,8 +2,8 @@
 # React Modal App
 
 This is a simple example project demonstrating how to create a modal dialog component in React using different state management approaches.
+![Untitled design (2)](https://github.com/DevShahmeer/modal-dialog/assets/108333592/394da708-d5fd-4d51-a721-162ecea0b390)
 
-![Untitled design (2)](https://github.com/DevShahmeer/modal-dialog/assets/108333592/d98918b9-3f53-442b-8ad6-3a76d24815e9)
 
 
 ## Features
